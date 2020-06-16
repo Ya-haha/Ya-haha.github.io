@@ -154,6 +154,72 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-springmvc响应数据和结果视图" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/14/springmvc%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE%E5%92%8C%E7%BB%93%E6%9E%9C%E8%A7%86%E5%9B%BE/">springmvc响应数据和结果视图</a>
+    </h1>
+  
+
+            
+        
+        <a href="/2020/06/14/springmvc%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE%E5%92%8C%E7%BB%93%E6%9E%9C%E8%A7%86%E5%9B%BE/" class="archive-article-date">
+  	<time datetime="2020-06-14T02:48:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-响应数据"><a href="#1-响应数据" class="headerlink" title="1. 响应数据"></a>1. 响应数据</h4><h5 id="1-1-controller-方法返回字符串可以指定逻辑视图名，通过视图解析器解析为物理视图地址。"><a href="#1-1-controller-方法返回字符串可以指定逻辑视图名，通过视图解析器解析为物理视图地址。" class="headerlink" title="1.1 controller 方法返回字符串可以指定逻辑视图名，通过视图解析器解析为物理视图地址。"></a>1.1 controller 方法返回字符串可以指定逻辑视图名，通过视图解析器解析为物理视图地址。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//指定逻辑视图名，经过视图解析器解析jsp物理路径：/WEB-INF/pages/success.jsp</span><br><span class="line">@RequestMapping(<span class="string">"/user"</span>)</span><br><span class="line">public class UserController &#123;</span><br><span class="line">    @RequestMapping(<span class="string">"/testString"</span>)</span><br><span class="line">    public String <span class="function"><span class="title">testString</span></span>()&#123;</span><br><span class="line">        System.out.println(<span class="string">"执行了"</span>);</span><br><span class="line">        <span class="built_in">return</span> <span class="string">"success"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/06/14/springmvc%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE%E5%92%8C%E7%BB%93%E6%9E%9C%E8%A7%86%E5%9B%BE/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/06/14/springmvc%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE%E5%92%8C%E7%BB%93%E6%9E%9C%E8%A7%86%E5%9B%BE/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-SpringMVC入门" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -177,7 +243,7 @@
       
         <br>
 
-<h3 id="1-0-SpringMVC环境配置"><a href="#1-0-SpringMVC环境配置" class="headerlink" title="1.0 SpringMVC环境配置"></a>1.0 SpringMVC环境配置</h3><h4 id="1-1-SpringMVC-的maven坐标"><a href="#1-1-SpringMVC-的maven坐标" class="headerlink" title="1.1 SpringMVC 的maven坐标"></a>1.1 SpringMVC 的maven坐标</h4>
+<h3 id="1-0-SpringMVC环境配置"><a href="#1-0-SpringMVC环境配置" class="headerlink" title="1.0 SpringMVC环境配置"></a>1.0 SpringMVC环境配置</h3><h4 id="1-1-SpringMVC-的maven坐标"><a href="#1-1-SpringMVC-的maven坐标" class="headerlink" title="1.1 SpringMVC 的maven坐标"></a>1.1 SpringMVC 的maven坐标</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">	&lt;!-- 版本锁定 --&gt;    </span><br><span class="line">&lt;properties&gt;        </span><br><span class="line">	&lt;spring.version&gt;5.0.2.RELEASE&lt;/spring.version&gt;    </span><br><span class="line">&lt;/properties</span><br><span class="line">&lt;dependencies&gt;        </span><br><span class="line">	&lt;dependency&gt;            </span><br><span class="line">		&lt;groupId&gt;org.springframework&lt;/groupId&gt;            </span><br><span class="line">		&lt;artifactId&gt;spring-context&lt;/artifactId&gt;           </span><br><span class="line">		&lt;version&gt;<span class="variable">$&#123;spring.version&#125;</span>&lt;/version&gt;        </span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">       &lt;dependency&gt;            </span><br><span class="line">		&lt;groupId&gt;org.springframework&lt;/groupId&gt;            </span><br><span class="line">		&lt;artifactId&gt;spring-web&lt;/artifactId&gt;            </span><br><span class="line">		&lt;version&gt;<span class="variable">$&#123;spring.version&#125;</span>&lt;/version&gt;        </span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">       &lt;dependency&gt;            </span><br><span class="line">		&lt;groupId&gt;org.springframework&lt;/groupId&gt;            </span><br><span class="line">		&lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;            </span><br><span class="line">		&lt;version&gt;<span class="variable">$&#123;spring.version&#125;</span>&lt;/version&gt;        </span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">       &lt;dependency&gt;            </span><br><span class="line">		&lt;groupId&gt;javax.servlet&lt;/groupId&gt;            </span><br><span class="line">		&lt;artifactId&gt;servlet-api&lt;/artifactId&gt;            </span><br><span class="line">		&lt;version&gt;2.5&lt;/version&gt;            </span><br><span class="line">		&lt;scope&gt;provided&lt;/scope&gt;        </span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">       &lt;dependency&gt;            </span><br><span class="line">		&lt;groupId&gt;javax.servlet.jsp&lt;/groupId&gt;            </span><br><span class="line">		&lt;artifactId&gt;jsp-api&lt;/artifactId&gt;            </span><br><span class="line">		&lt;version&gt;2.0&lt;/version&gt;            </span><br><span class="line">		&lt;scope&gt;provided&lt;/scope&gt;        </span><br><span class="line">	&lt;/dependency&gt;    </span><br><span class="line">&lt;/dependencies&gt;</span><br></pre></td></tr></table></figure>
         
           <a class="article-more-a" href="/2020/06/10/SpringMVC%E5%85%A5%E9%97%A8/#more">more >></a>
         
@@ -243,7 +309,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+        <p>This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
         
           <a class="article-more-a" href="/2020/06/10/hello-world/#more">more >></a>
         
@@ -430,27 +502,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="http://zhongguose.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>中国色-中国传统颜色</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+              <a href="http://www.aigei.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>音效配乐</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+              <a href="https://codepen.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>codepen</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="https://www.iconfont.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>阿里矢量图</a>
             </li>
           
         </ul>
@@ -461,7 +525,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">Welcome to Blog,&lt;br&gt;&lt;br&gt;我是一位即将毕业的大学生&lt;br&gt;软件开发专业  (JavaWeb方向)&lt;br&gt;想找一份专业对口的工作&lt;br&gt;若您所在的公司正缺人手&lt;br&gt;您可以通过电子邮件联系我&lt;br&gt;我将感激不尽&lt;br&gt;&lt;br&gt;点击左下方图标即可</div>
   	  	
     	</section>
     
