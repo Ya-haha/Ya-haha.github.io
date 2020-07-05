@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | CodeSillyMonkey</title>
+  <title>反射：框架设计的灵魂 | CodeSillyMonkey</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a ne">
+  <meta name="description" content="框架：半成品软件。在框架的基础上进行开发可以简化代码。 反射：将类的各个组成部分封装为其它对象。 好处：  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;1、可以在运行过程中操作这些对象。  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;2、可以解耦，提高程序的可扩展性。         获取class对象的方式&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;1、Class.forName(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2020/06/14/hello-world/index.html">
+<meta property="og:title" content="反射：框架设计的灵魂">
+<meta property="og:url" content="http://yoursite.com/2020/07/05/%E5%8F%8D%E5%B0%84/index.html">
 <meta property="og:site_name" content="CodeSillyMonkey">
-<meta property="og:description" content="This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a ne">
+<meta property="og:description" content="框架：半成品软件。在框架的基础上进行开发可以简化代码。 反射：将类的各个组成部分封装为其它对象。 好处：  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;1、可以在运行过程中操作这些对象。  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;2、可以解耦，提高程序的可扩展性。         获取class对象的方式&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;1、Class.forName(">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-14T03:01:32.000Z">
-<meta property="article:modified_time" content="2020-07-05T09:59:40.686Z">
+<meta property="article:published_time" content="2020-07-05T10:05:05.000Z">
+<meta property="article:modified_time" content="2020-07-05T12:07:51.245Z">
 <meta property="article:author" content="最笨的码农">
+<meta property="article:tag" content="Java基础">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="CodeSillyMonkey" type="application/atom+xml">
@@ -157,14 +158,14 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-反射" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      反射：框架设计的灵魂
     </h1>
   
 
@@ -178,40 +179,61 @@
               </a>
               
         
-        <a href="/2020/06/14/hello-world/" class="archive-article-date">
-  	<time datetime="2020-06-14T03:01:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-14</time>
+        <a href="/2020/07/05/%E5%8F%8D%E5%B0%84/" class="archive-article-date">
+  	<time datetime="2020-07-05T10:05:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<a id="more"></a>
-
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <ul>
+<li>框架：半成品软件。在框架的基础上进行开发可以简化代码。<ul>
+<li>反射：将类的各个组成部分封装为其它对象。<ul>
+<li>好处：<br>  &ensp;&ensp;&ensp;&ensp;1、可以在运行过程中操作这些对象。<br>  &ensp;&ensp;&ensp;&ensp;2、可以解耦，提高程序的可扩展性。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <br>
 
-<h3 id="Hexo-Yilia-高级配置教程"><a href="#Hexo-Yilia-高级配置教程" class="headerlink" title="Hexo Yilia 高级配置教程"></a>Hexo Yilia 高级配置教程</h3><p>More info: <a href="https://cloudy-liu.github.io/2018/04/07/Hexo_yilia_%E4%B8%BB%E9%A2%98%E4%B8%80%E6%8F%BD%E5%AD%90%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" target="_blank" rel="noopener">主题一揽子使用方案</a></p>
-<p>More info: <a href="http://dongshuyan.com/2019/05/24/hexo%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" target="_blank" rel="noopener">Hexo Yilia 高级配置</a></p>
-<hr>
+<ul>
+<li>获取class对象的方式<br>&ensp;&ensp;&ensp;&ensp;1、Class.forName(“全类名”)：将字节码文件加载进内存，返回Class对象。<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<font color=red>多用于配置文件，将类名定义在配置文件中。读取文件，加载类</font><br>&ensp;&ensp;&ensp;&ensp;2、类名.class：通过类名的属性class获取<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<font color=red>多用于参数的传递</font><br>&ensp;&ensp;&ensp;&ensp;3、对象.getClass:getClass方法在Object类中定义。<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<font color=red>多用于字节码的获取对象的方式</font></li>
+</ul>
 <br>
 
-<h3 id="Win10邮箱配置"><a href="#Win10邮箱配置" class="headerlink" title="Win10邮箱配置"></a>Win10邮箱配置</h3><h4 id="1-以管理员的身份运行CMD"><a href="#1-以管理员的身份运行CMD" class="headerlink" title="1. 以管理员的身份运行CMD"></a>1. 以管理员的身份运行CMD</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">路径：C:\Windows\System32\cmd.exe</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Class对象功能<ul>
+<li>获取功能：</li>
+</ul>
+</li>
+</ul>
+<p>&ensp;&ensp;&ensp;&ensp;1、获取成员变量<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Field[] getFields():获取所有public修饰的成员变量<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Field getFiled(String name):获取指定名称的public修饰的成员变量<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Field[] getDeclaredFields()：获取所有的成员变量，不考虑修饰符<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Field getDeclaredField(String name)</p>
+<p>&ensp;&ensp;&ensp;&ensp;2、获取构造方法<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Constructor&#60;?&#62;[] getConstructors()<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Constructor&#60;T&#62; getConstructor(类&#60;?&#62;… parameterTypes)<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Constructor&#60;?&#62;[] getDeclaredConstructors()<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Constructor&#60;T&#62; getDeclaredConstructor(类&#60;?&#62;… parameterTypes)</p>
+<p>&ensp;&ensp;&ensp;&ensp;3、获取成员方法<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Method[] getMethods()<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Method getMethod(String name, 类&#60;?&#62;…parameterTypes)<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Method[] getDeclaredMethods()<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Method getDeclaredMethod(String name, 类&#60;?&#62;…parameterTypes)</p>
+<p>&ensp;&ensp;&ensp;&ensp;4、获取全类名<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;String getName()</p>
+<br>
 
-<h4 id="2-copy下面两串命令"><a href="#2-copy下面两串命令" class="headerlink" title="2. copy下面两串命令"></a>2. copy下面两串命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckNetIsolation.exe LoopbackExempt -a -p=S-1-15-2-2551677095-2355568638-4209445997-2436930744-3692183382-387691378-1866284433</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckNetIsolation.exe LoopbackExempt -a -p=S-1-15-2-2750798217-1343590035-1234819260-1030354384-3318145141-3720257911-3461195215</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>Field：成员变量</p>
+<ul>
+<li>操作:<br>&ensp;&ensp;&ensp;&ensp;1.设置值<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;void set(Object obj,Object value)<br>&ensp;&ensp;&ensp;&ensp;2.获取值<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;get(Object obj)<br>&ensp;&ensp;&ensp;&ensp;3.忽略访问权限修饰符的安全检查<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;setAccessible(true);暴力反射</li>
+</ul>
+</li>
+<li><p>Constructor: 构造方法</p>
+<ul>
+<li>创建对象：<br>&ensp;&ensp;&ensp;&ensp;T newInstance(Objec initargs)<br>&ensp;&ensp;&ensp;&ensp;如果使用空参数构造方法创建对象，操作可以简化：Class对象的newInstance方法</li>
+</ul>
+</li>
+<li><p>Method:方法对象</p>
+<ul>
+<li>执行方法：<br>&ensp;&ensp;&ensp;&ensp;Object invoke(Object obj,Objec … args)</li>
+<li>获取方法名称<br>&ensp;&ensp;&ensp;&ensp;String getName:获取方法名</li>
+</ul>
+</li>
+</ul>
+
       
 
       
@@ -251,6 +273,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -301,7 +334,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://ya-haha.github.io/2020/06/14/hello-world/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://ya-haha.github.io/2020/07/05/%E5%8F%8D%E5%B0%84/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -315,15 +348,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/05/Junit%E6%B5%8B%E8%AF%95/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Junit测试
-        
-      </div>
-    </a>
   
+    <a href="/2020/07/05/Junit%E6%B5%8B%E8%AF%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Junit测试</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -348,7 +377,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo-Yilia-高级配置教程"><span class="toc-number">1.5.</span> <span class="toc-text">Hexo Yilia 高级配置教程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Win10邮箱配置"><span class="toc-number">1.6.</span> <span class="toc-text">Win10邮箱配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-以管理员的身份运行CMD"><span class="toc-number">1.6.1.</span> <span class="toc-text">1. 以管理员的身份运行CMD</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-copy下面两串命令"><span class="toc-number">1.6.2.</span> <span class="toc-text">2. copy下面两串命令</span></a></li></ol></li></ol></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
